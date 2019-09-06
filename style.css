@@ -1,0 +1,102 @@
+html,body{
+	
+	animation: gradientText 6s ease infinite;
+	background-image: linear-gradient(to bottom right,#CD9CFF,#A2A4E8,#BFE1FF,#A2E8E5,#B3FFD2);
+	background-size: 1000% 1000%;
+	height: 100%;
+	background-repeat: no-repeat;
+	
+	
+}
+
+h1{
+	
+	margin-left: 43.5%;
+	margin-top: 2%;
+	font-family: gothic-open-shaded, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	text-shadow: 2px 2px aqua;
+	animation: slideText 3s;
+	position: absolute;
+	
+	
+	
+	
+
+}
+
+header,.headerText
+{
+	margin-left: -5%;
+	margin-top: -1.5%;
+	
+	
+
+}
+
+.blockText{
+	
+	box-shadow: 5px 5px;
+	height: 300px;
+	width: 101%;
+	margin-left: -.6%;
+	position: relative;
+	
+	
+	
+}
+
+#titleText{
+	
+	background-color: white;
+	height: 100px;
+	width: 100%;
+	margin-left: .35%;
+	box-shadow: 5px 5px;
+	
+	
+	
+}
+
+.imageFiller{
+	
+	width: 101%;
+	height: 720px;
+	
+	
+		
+}
+
+#tenText{
+	
+	background-color: aqua;
+	margin-top: -8%;
+	
+	
+}
+
+#tenPic{
+	
+	margin-top: 5%;
+	margin-left: -.59%;
+	
+	
+}
+
+@keyframes slideText{
+	
+	from{margin-left:-110%;}
+	to{margin-left: 43.5%;}
+	
+}
+
+@keyframes gradientText{
+
+	0%{background-position: 0% 50%}
+	50%{background-position: 100% 50%}
+	100%{background-position: 0% 50%}
+	
+
+}
+
