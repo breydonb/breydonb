@@ -2,8 +2,8 @@ html,body{
 	
 	animation: gradientText 6s ease infinite;
 	background-image: linear-gradient(to bottom right,#CD9CFF,#A2A4E8,#BFE1FF,#A2E8E5,#B3FFD2);
-	background-size: 1000% 1000%;
-	height: 100%;
+	background-size: 2000% 2000%;
+	height: 200%;
 	background-repeat: no-repeat;
 	
 	
@@ -19,15 +19,39 @@ h1{
 	text-shadow: 2px 2px aqua;
 	animation: slideText 3s;
 	position: absolute;
-	
-	
-	
-	
 
 }
 
-header,.headerText
-{
+main{
+	
+	font-family: fira-sans, sans-serif;
+	font-weight: 800;
+	font-style: italic;
+	text-shadow: 1px 1px black;
+	
+}
+
+footer{
+	
+	text-align: center;
+	font-family: acumin-pro, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 16pt;
+	
+}
+
+p{
+	
+	text-align: left;
+	margin-left: 3%;
+	
+	
+	
+}
+
+header,.headerText{
+	
 	margin-left: -5%;
 	margin-top: -1.5%;
 	
@@ -37,11 +61,25 @@ header,.headerText
 
 .blockText{
 	
+	background-image: linear-gradient(#C1FFB3,#A2E8D1);
+	height: 100px;
+	width: 103.4%;
+	margin-left: -3%;
+	margin-top: 5%;
 	box-shadow: 5px 5px;
-	height: 300px;
-	width: 101%;
-	margin-left: -.6%;
-	position: relative;
+	position: sticky;
+	
+	
+	
+}
+.paraText{
+	
+	background-image: linear-gradient(#C1FFB3,#A2E8D1);
+	height: 200px;
+	width: 103.4%;
+	margin-left: -3%;
+	margin-top: -2.5%;
+	box-shadow: 5px 5px;
 	
 	
 	
@@ -60,27 +98,70 @@ header,.headerText
 }
 
 .imageFiller{
+
+	margin-top: .25%;
+	width: 115.5%;
+	height: 700px;
+	margin-left: -15%;
 	
-	width: 101%;
-	height: 720px;
-	
-	
-		
 }
+
+.imageFiller:hover{
+	
+	-webkit-filter: brightness(30%);
+}
+
+ol,li{
+	
+	font-size: 24pt;
+	text-align: center;
+	list-style-position: inside;
+	
+}
+
+
 
 #tenText{
 	
-	background-color: aqua;
-	margin-top: -8%;
+	color: aqua;
 	
 	
 }
 
-#tenPic{
+#nineText{
 	
-	margin-top: 5%;
-	margin-left: -.59%;
+	color: #FFA3F7;
 	
+	
+}
+
+#eightText{
+	
+	color: #B4A2E8;
+	
+}
+
+#sevenText{
+	
+	color: #825EEC;
+	
+}
+
+#sixText{
+	
+	color: #FF686B;
+	
+}
+
+#fiveText{
+	
+	color: #4a9be8;
+		
+}
+
+#fourText{
+	
+	color: #3896ff;
 	
 }
 
@@ -100,3 +181,8 @@ header,.headerText
 
 }
 
+@keyframes gameSlide{
+	
+	/*margin-right: ;*/
+	
+}
