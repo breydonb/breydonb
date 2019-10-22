@@ -1,199 +1,194 @@
 html,body{
-	
-	animation: gradientText 5s ease infinite;
-	background-image: linear-gradient(to bottom right,#CD9CFF,#A2A4E8,#BFE1FF,#A2E8E5,#B3FFD2);
-	background-size: 2000% 2000%;
-	height: 200%;
-	background-repeat: no-repeat;
-	
-	
-}
 
-h1{
-	
-	margin-left: 43.5%;
-	margin-top: 2%;
-	font-family: gothic-open-shaded, sans-serif;
-	font-weight: 400;
-	font-style: normal;
-	text-shadow: 2px 2px aqua;
-	animation: slideText 3s;
-	position: absolute;
+  background-image: linear-gradient(to bottom right, #59F1FF, #A6F8FF, #47C1CC, #537C80);
+  animation: gradientText 5s ease infinite;
+  background-size: 2000% 2000%;
+  height: 200%;
+  background-repeat: no-repeat;
+
+  overflow-y: hidden;
 
 }
 
-main{
-	
-	font-family: fira-sans, sans-serif;
-	font-weight: 800;
-	font-style: italic;
-	text-shadow: 1px 1px black;
-	
+.container{
+
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  position: relative;
+  margin: 0 auto; /*centers div container*/
+
+
 }
 
-footer{
-	
-	text-align: center;
-	font-family: acumin-pro, sans-serif;
-	font-weight: 300;
-	font-style: normal;
-	font-size: 16pt;
-	
+.text{
+
+  
+  text-align: center;
+  margin-top: 1%;
+
+  color: #FF73DE;
+  
+  text-shadow:1px 1px black;
+  
+  font-size: 32pt;
+  font-family: cortado, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
 }
+
+.nav{
+
+  background-color: white;
+  width: 150px;
+  height: 650px;
+  border: 1px solid black;
+  //display: inline-block;
+
+
+}
+
+ul{
+  
+  list-style-type: none;
+  margin: 0;
+  padding: 1px;
+
+}
+
+
+li a {
+
+  display: block;
+  color: #59F1FF;
+  padding: 20px;
+  
+  text-decoration: none;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /*I found this on stack overflow*/
+
+  font-family: acumin-pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18pt;
+
+}
+
+a:hover{
+
+  color: rgb(43, 194, 253);
+  background-color: #4FBCC4;
+
+}
+
+.content{
+
+  border-radius: 5px;
+  border: 2px solid black;
+  
+  background-image: url("cool-background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 90%;
+  height: 630px;
+
+  float: right;
+  margin-top: -34%;
+
+}
+
+.wrapper {
+
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    grid-template-rows: repeat(2,275px);
+    grid-gap: 20px;
+    justify-content: space-around;
+    margin-top: 1%;
+}
+
+.item{
+
+  background-color: white;
+  border: 2px solid black;
+  
+  position: relative;
+  text-align: center;
+
+}
+
+/*.item:hover{
+
+  -webkit-filter: brightness(30%);
+  filter:brightness(30%);
+
+
+}*/
+
+.item:onclick{
+
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+
+}
+
+.hvrItem{
+
+  position:absolute;
+  background-color: yellow;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+
+}
+
+.blockTest{
+
+  width: 1700px;
+  height: 620px;
+  border: 2px solid black;
+  float: right;
+  margin-top: -33%;
+  background-color: white;
+
+  display: grid;
+  grid-template-columns: 500px 1200px ;
+  
+
+}
+
+.aboutText{
+
+  text-align: left;
+  padding: 20px;
+
+  font-size: 24pt;
+  font-family: acumin-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  word-wrap: break-word;
+
+
+
+
+}
+
 
 p{
-	
-	text-align: left;
-	margin-left: 3%;
-	
-	
-	
-}
 
-header,.headerText{
-	
-	margin-left: -5%;
-	margin-top: -1.5%;
-	
-	
+  color: white;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 24pt;
+  font-family: acumin-pro, sans-serif;
+  font-weight: 300;
+
 
 }
 
-.blockText{
-	
-	background-image: linear-gradient(#C1FFB3,#A2E8D1);
-	height: 100px;
-	width: 103.4%;
-	margin-left: -3%;
-	margin-top: 5%;
-	box-shadow: 5px 5px;
-	position: sticky;
-	
-	
-	
-}
-.paraText{
-	
-	background-image: linear-gradient(#C1FFB3,#A2E8D1);
-	height: 200px;
-	width: 103.4%;
-	margin-left: -3%;
-	margin-top: -2.5%;
-	box-shadow: 5px 5px;
-	
-	
-	
-}
 
-#titleText{
-	
-	background-color: white;
-	height: 100px;
-	width: 100%;
-	margin-left: .35%;
-	box-shadow: 5px 5px;
-	
-	
-	
-}
-
-.imageFiller{
-
-	margin-top: .25%;
-	width: 115.5%;
-	height: 700px;
-	margin-left: -15%;
-	
-}
-
-.imageFiller:hover{
-	
-	-webkit-filter: brightness(30%);
-}
-
-ol,li{
-	
-	font-size: 24pt;
-	text-align: center;
-	list-style-position: inside;
-	
-}
-
-.smashText{
-	
-	text-align: center;
-	
-	
-}
-
-#tenText{
-	
-	color: aqua;
-	
-	
-}
-
-#nineText{
-	
-	color: #FFA3F7;
-	
-	
-}
-
-#eightText{
-	
-	color: #B4A2E8;
-	
-}
-
-#sevenText{
-	
-	color: #825EEC;
-	
-}
-
-#sixText{
-	
-	color: #FF686B;
-	
-}
-
-#fiveText{
-	
-	color: #4a9be8;
-		
-}
-
-#fourText{
-	
-	color: #3896ff;
-	
-}
-
-#threeText{
-	
-	color: #FF6052;
-	
-}
-
-#twoText{
-	
-	color: #306DB3;
-	
-}
-
-#oneText{
-	
-	color: #E83F63;
-	
-}
-
-@keyframes slideText{
-	
-	from{margin-left:-110%;}
-	to{margin-left: 43.5%;}
-	
-}
 
 @keyframes gradientText{
 
@@ -202,10 +197,4 @@ ol,li{
 	100%{background-position: 0% 50%}
 	
 
-}
-
-@keyframes gameSlide{
-	
-	/*margin-right: ;*/
-	
 }
