@@ -1,0 +1,94 @@
+div{
+
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  transition: transform 3s, width .25s linear;
+
+}
+
+p{
+
+  text-align: center;
+  font-size: 18pt;
+  color: white;
+
+}
+
+.text{
+
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18pt;
+  float:left;
+  margin-top: 50%;
+  color: rgb(0, 255, 34);
+  word-wrap: break-word;
+
+}
+
+.div1{
+
+  background-color: blue;
+
+}
+
+.div1:hover{
+
+  transform: rotate3d(8,3,5,720deg);
+  
+
+}
+
+.div2{
+
+  background-color: gold;
+
+}
+
+.div2:hover{
+
+  width: 500px;
+
+}
+
+.div3:hover{
+
+  animation: rgbAnimation 2s linear infinite
+  
+
+}
+
+@keyframes rgbAnimation{
+
+  0%{
+      background-color: black;
+      width: 200px;
+    }
+  20%{
+      background-color: blue;
+      width: 100px;
+     }
+  40%{
+        background-color: red;
+        width: 500px;
+    
+    }
+  60%{
+        background-color: aqua;
+        width: 150px;
+    }
+  80%{
+        background-color: dodgerblue;
+
+  }
+  100%{
+        background-color: #651982
+        
+
+  }
+
+
+
+}
