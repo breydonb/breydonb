@@ -23,12 +23,14 @@ function databaseConnection(){
 	{
 	    if ($_POST['submit'] == "Create Account") // insert new record chosen
 		{
-       			$stmt = $conn -> prepare("INSERT INTO users (usrname,encrypted_password,usergroup,email) VALUES (?,?,?,?)");
-			$stmt -> bind_param("ssss",$usrname,$encrypted_password, $usergroup,$email);
+       			$stmt = $conn -> prepare("INSERT INTO users (usrname,encrypted_password,usergroup,email,firstName,lastName) VALUES (?,?,?,?,?,?)");
+			$stmt -> bind_param("ssssss",$usrname,$encrypted_password, $usergroup,$email,$firstName,$lastName);
 			$usrname= $_POST['usrname'];
 			$encrypted_password=$_POST['passwd'];
 			$usergroup="user";
 			$email="none set";
+			$firstName=$_POST['firstName'];
+			$lastName=$_POST['lastName'];
 			
 			$stmt -> execute();
 
@@ -55,6 +57,12 @@ function databaseConnection(){
 			<br>
 			<label>Verify Password:</label>
 			<input type="password" id="verifyPasswd">
+			<br>
+			<label>First Name:</label>
+			<input type="text" name="firstName">
+			<br>
+			<label>Last Name:</label>
+			<input type="text" name="lastName">
 			<br>
 			<input type="submit" name="submit" value="Create Account">
 			<input type="submit" name="submit" value="Cancel">
