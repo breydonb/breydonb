@@ -6,6 +6,27 @@ body,html{
 	
 }
 
+form{
+	
+	text-align: center;
+	padding: 25px;
+}
+
+.login-box{
+	
+	background-color: white;
+	height: 350px;
+	width: 550px;
+	border-radius: 20px;
+	border-color: black;
+
+	
+	padding: 15px;
+	
+	
+}
+
+
 .container{
 	
 	
@@ -51,7 +72,12 @@ p{
 	font-weight: 100;
 	font-size: 14pt;
 	
-	
-	
 }
 
+label{
+	
+	font-family: upgrade, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	
+}
