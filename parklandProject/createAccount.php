@@ -41,7 +41,7 @@ function databaseConnection(){
 </head>
 
 <body>
-	<div class="login-menu">
+	<div class="login-box">
 		<form method="POST">
 			<label>Username:</label>
 			<input type="text" name="Username">
