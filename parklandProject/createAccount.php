@@ -12,29 +12,28 @@
 		if ($_POST['test_submit'] == "Create Account") // insert new record chosen
 			{
 					$dbconn = databaseConnection();
-			
-					$stmt = $conn -> prepare("INSERT INTO users (usrname,encrypted_password,usergroup,email,firstName,lastName) VALUES (?,?,?,?,?,?)");
-					$stmt -> bind_param("ssssss",$usrname,$encrypted_password, $usergroup,$email,$firstName,$lastName);
-					/*$stmt = $dbconn->prepare("INSERT INTO users (usrname) VALUES (?)");
-					$stmt -> bind_param("s",$usrname);*/
+					
 					$usrname= $_POST['usrname'];
-					$encrypted_password=$_POST['passwd'];
+					$encrypted_password= $_POST['passwd'];
 					$usergroup="user";
 					$email="none set";
 					$firstName=$_POST['firstName'];
-					$lastName=$_POST['lastName'];
+					$lastName=$_POST['lastName'];		
+			
+					$stmt = $dbconn -> prepare("INSERT INTO users (usrname,encrypted_password,usergroup,email,firstName,lastName) VALUES (?,?,?,?,?,?)");
+					$stmt -> bind_param("ssssss",$usrname,$encrypted_password, $usergroup,$email,$firstName,$lastName);
+					/*$stmt = $dbconn->prepare("INSERT INTO users (usrname) VALUES (?)");
+					$stmt -> bind_param("s",$usrname);*/
 
 					$stmt -> execute();
 			
 					mysqli_close($dbconn);
 
 					header("Location: welcome.php");
-					echo("<p>Success</p>");
-	}
+			}
 			if ($_POST['test_submit'] == "Cancel") // insert new record chosen
 			{
 					header("Location: welcome.php");
-					echo "<b>WTF</b>";
 			}
     }
 
