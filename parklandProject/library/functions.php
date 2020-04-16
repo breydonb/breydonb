@@ -34,9 +34,9 @@ function printTable($conn){
 			echo "<tr>";
 			echo "<td>". $row['id'] ."</td>"
 				."<td>". $row['usrname']. "</td>"
-				."<td>". $row['encrypted_password']. "<td>"
-				."<td>". $row['firstName']. "<td>"
-				."<td>". $row['lastName']. "<td>";
+				."<td>". $row['encrypted_password']. "</td>"
+				."<td>". $row['firstName']. "</td>"
+				."<td>". $row['lastName']. "</td>";
 			echo "</tr>";
 		}
 		

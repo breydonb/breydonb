@@ -14,6 +14,11 @@
 	
 </head>
 <body>
-	<?php printTable($conn); ?>
+	<div class="container">
+		<h1>Listing Accounts</h1>
+	</div>
+	<br />
+	<?php printTable($conn); 
+	mysqli_close($conn);?>
 </body>
 </html>

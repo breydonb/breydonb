@@ -3,6 +3,7 @@
 body,html{
 	
 	background-color: #103140;
+	font-family: upgrade, sans-serif;
 	
 }
 
@@ -33,7 +34,6 @@ form{
 	height: 100px;
 	width: 100%;
 	
-	padding:0;
 	
 	background-color: white;
 	
@@ -44,7 +44,7 @@ h1{
 	padding: 20px;
 	text-align: center;
 	
-	font-family: upgrade, sans-serif;
+	
 	font-style: normal;
 	font-weight: 400;
 	
@@ -60,27 +60,32 @@ h1{
 	
 }
 
-p{
+
+
+.text{
 	display: flex;
 	float: right;
 	padding: 25px;
 	margin-right: 5%;
 	
 	
-	font-family: upgrade, sans-serif;
+	
 	font-style: normal;
 	font-weight: 100;
 	font-size: 14pt;
 	
 }
 
+
+
 label{
 	
-	font-family: upgrade, sans-serif;
+	
 	font-weight: 400;
 	font-style: normal;
 	
 }
+
 
 .listTable{
 	
@@ -92,5 +97,42 @@ label{
 	font-size: 18pt;
 	padding: 5px;
 	
+	
+}
+
+td{
+	
+	border: solid 3px black;
+	
+}
+
+.grid-menu{
+	
+	display: grid;
+	grid-row-gap: 25px;
+	
+	padding: 5px;
+	
+	
+	
+}
+
+.button-wave{
+	
+	background-color: white;
+	
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	border-radius: 5px;
+	
+	grid-column: 4 / 4;
+	
+}
+
+.button-wave:hover {
+	
+  box-shadow: 0 12px 16px 0 rgba(255,0,255,0.24), 0 17px 50px 0 rgba(255,0,255,0.19);
 	
 }
