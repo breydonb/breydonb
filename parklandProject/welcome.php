@@ -16,10 +16,10 @@
 	</div>
 	<br />
 	<div class="grid-menu">
-		<a href="createAccount.php" class="button-wave" >
+		<a href="createAccount.php" class="button-wave" id="item-1">
 			<p class="button-text">Sign Up</p>
 		</a>
-		<a href="#" class="button-wave" >
+		<a href="#" class="button-wave" id="item-2">
 			<p class="button-text">Log In</p>
 		</a>
 	</div>
