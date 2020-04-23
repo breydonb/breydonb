@@ -15,7 +15,7 @@
 					$dbconn = databaseConnection();
 					
 					$usrname= $_POST['usrname'];
-					$encrypted_password= $_POST['passwd'];
+					$encrypted_password= password_hash($_POST['passwd'], PASSWORD_DEFAULT);
 					$usergroup="user";
 					$email="none set";
 					$firstName=$_POST['firstName'];
@@ -42,7 +42,7 @@
 </head>
 <body>
         <div class="login-box">
-                <form method="POST">
+                <form method="POST" onSubmit="passwdCheck()">
                         <label>Username:</label>
                         <input type="text" name="usrname">
                         <br>
@@ -62,5 +62,7 @@
                         <input type="submit" name="test_submit" value="Cancel">
                 </form>
         </div>
+	
+<script src="script.js"></script>
 </body>
 </html>

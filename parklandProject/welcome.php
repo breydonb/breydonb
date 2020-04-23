@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Welcome to My Repository!</h1>
+		<h1>Welcome to My Parkland Project!</h1>
 	</div>
 	<br />
 	<div class="flex-menu">
