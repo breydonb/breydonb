@@ -18,7 +18,7 @@
 		<h1>Listing Accounts</h1>
 	</div>
 	<br />
-	<div class="grid-menu list-db">
+	<div class="grid-menu">
 		<?php printTable($conn); mysqli_close($conn);?>
 	</div>
 </body>

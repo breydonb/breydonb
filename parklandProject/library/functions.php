@@ -24,7 +24,7 @@ function printTable($conn){
 	
 	if($result -> num_rows > 0){
 		
-		echo "<table class='listTable'>";
+		echo "<table class='list-db'>";
 		echo "<tr>";
 		echo "<th>ID</th>"."<th>Username</th>"."<th>Password</th>"."<th>First Name</th>". "<th>Last Name</th>";
 		echo "</tr>";
