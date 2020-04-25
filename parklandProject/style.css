@@ -15,15 +15,9 @@ form{
 
 .login-box{
 	
-	background-color: white;
-	height: 350px;
-	width: 550px;
-	border-radius: 20px;
-	border-color: black;
-
-	
-	padding: 15px;
-	
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(6,auto);
 	
 }
 
@@ -142,6 +136,15 @@ td{
 	grid-column: 4 / 5;
 	
 	margin-top: 2%;
+	
+	background-color: white;
+	height: 350px;
+	width: 550px;
+	border-radius: 20px;
+	border-color: black;
+
+	
+	padding: 15px;
 }
 
 .button-wave{

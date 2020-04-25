@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <title>Create Account</title>
 <link href="style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--<script type="text/javascript">
 var check = function() {
-  if (document.getElementById('passwd').value == document.getElementById('passwd1').value) {
+  if (document.getElementById('passwd1').value == document.getElementById('passwd').value) {
 	  
 		document.getElementById('message').style.color = 'green';
 		document.getElementById('message').innerHTML = 'matching';
@@ -18,6 +19,14 @@ var check = function() {
 		document.getElementById('message').innerHTML = 'not matching';
 	}
 }
+</script>-->
+<script type="text/javascript">
+$('#passwd, #passwd1').on('keyup', function () {
+  if ($('#passwd').val() == $('#passwd1').val()) {
+    $('#message').html('Matching').css('color', 'green');
+  } else 
+    $('#message').html('Not Matching').css('color', 'red');
+});	
 </script>
 	
 <?php
@@ -74,15 +83,15 @@ var check = function() {
 </head>
 <body class="account-grid">
         <div id="createItem">
-                <form method="POST" onSubmit="passwdCheck();" class="login-box">
+                <form method="POST" class="login-box" >
                         <label>Username:</label>
                         <input type="text" name="usrname" value='<?php echo showPost("usrname")?>'>
                         <br>
                         <label>Password:</label>
-                        <input type="password" name="passwd" id="passwd" onkeyup='check();'>
+                        <input type="password" name="passwd" id="passwd1">
                         <br>
                         <label>Verify Password:</label>
-                        <input type="password" name="passwd1" id="passwd1"><span id='message'></span>
+                        <input type="password" name="passwd1" id="passwd"><span id='message'></span>
                         <br>
                         <label>First Name:</label>
                         <input type="text" name="firstName" value='<?php echo showPost("firstName")?>'>
@@ -94,7 +103,5 @@ var check = function() {
                         <input type="submit" name="test_submit" value="Cancel">
                 </form>
         </div>
-	
-<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
