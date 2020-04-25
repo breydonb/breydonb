@@ -1,6 +1,3 @@
-<!doctype html>
-<html>
-<head>
 <?php
 function databaseConnection(){
 	
@@ -52,10 +49,18 @@ function printTable($conn){
 	
 }
 
+function showPost($name){
+	
+	if (isset($_POST[$name])){
+		
+		return $_POST[$name];
+	}
+	
+	else{
+		
+		return "";
+		
+	}
+}
+
 ?>
-
-</head>
-
-<body>
-</body>
-</html>

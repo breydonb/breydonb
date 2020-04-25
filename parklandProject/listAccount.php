@@ -19,7 +19,7 @@
 	</div>
 	<br />
 	<div class="grid-menu">
-		<?php printTable($conn); mysqli_close($conn);?>
+		<?php printTable($conn);?>
 	</div>
 </body>
 </html>
