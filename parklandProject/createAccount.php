@@ -72,9 +72,9 @@ var check = function() {
 
 	
 </head>
-<body>
-        <div class="login-box">
-                <form method="POST" onSubmit="passwdCheck();">
+<body class="account-grid">
+        <div id="createItem">
+                <form method="POST" onSubmit="passwdCheck();" class="login-box">
                         <label>Username:</label>
                         <input type="text" name="usrname" value='<?php echo showPost("usrname")?>'>
                         <br>

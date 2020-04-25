@@ -119,6 +119,15 @@ td{
 	
 }
 
+.account-grid{
+	
+	display: grid;
+	grid-template-columns: 20% repeat(4,auto) 20%;
+	
+	
+	
+}
+
 .list-db{
 	
 	grid-column: 4 / 5;
@@ -130,8 +139,9 @@ td{
 
 #createItem{
 	
-	grid-column: 3 / 4;
+	grid-column: 4 / 5;
 	
+	margin-top: 2%;
 }
 
 .button-wave{
