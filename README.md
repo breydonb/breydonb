@@ -1,4 +1,4 @@
-# <marquee>breydonb.github.io</marquee>
+# breydonb.github.io
 
 Projects with all the code!
 
