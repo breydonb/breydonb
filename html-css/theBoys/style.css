@@ -1,0 +1,310 @@
+h1{
+	
+	position: relative;
+	text-align: center;
+	color: #E6ADFF;
+	font-family: "GROBOLD";
+	font-size: 42px;
+	-webkit-text-stroke: 1px black;
+	
+}
+
+h2{
+	
+	position: relative;
+	text-align: center;
+	color: #E6ADFF;
+	font-family: "GROBOLD";
+	font-size: 60px;
+	-webkit-text-stroke: 1px black;
+	
+}
+
+p {
+	
+	font-family: "Komika Axis" ;
+	font-size: 28px;
+	margin-left: 20%;
+	color: #FF8761
+}
+
+p1{
+	
+	font-family: "Komika Axis" ;
+	font-size: 28px;
+	margin-left: 60%;
+	position: absolute;
+	top: 96%;
+}
+
+.images{
+	
+	margin-left: 10%;
+	padding: 5%;
+	
+}
+
+
+body {
+	
+	position: relative;
+	background-image: url("images/background.png");
+	
+}
+
+a{
+	
+	text-decoration: none;
+	
+}
+
+
+.container{
+	
+	position: relative;
+	text-align: center;
+	color: #33e8b5;
+	font-family: "GROBOLD";
+	font-size: 72px;
+	border-color: black;
+	border-size: 50%
+		
+}
+
+
+.about,.home,.gallery{
+	
+	height: 150px;
+	width: 150px;
+	margin-left: 20%;
+	
+}
+.home{
+	
+	margin-left: 34%;
+	
+}
+.gallery{
+	
+	margin-left: 32%;
+	
+}
+
+object{
+	
+	margin-left: 17%;
+
+}
+video{
+	
+	margin-left: -1.55%;
+	
+}
+@media screen and (max-width : 668px ){
+	
+	.mySlides{
+		height: 126px;
+	}
+
+	.prev,.next{
+		
+		top: 45px;
+		
+	}
+	.next{
+		
+		margin-left: 90%;
+		
+	}
+.centered{
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-150%)
+	
+	}
+	
+	
+}
+
+@media screen and (min-width:669px) and (max-width:768px){
+
+	.mySlides{
+		
+		height: 189px;
+		
+	}
+
+	.prev,.next{
+		
+		top: 90px;
+		
+	}
+	.next{
+		
+		margin-left: 60%;
+		
+	}
+	.centered{
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-250%)
+	
+	}
+	.about,.home,.gallery{
+	
+		height: 100px;
+		width: 100px;
+		margin-left: 14%;
+	
+	}
+	
+}
+
+@media screen and (min-width:768px) and (max-width:800px){
+	
+	.mySlides{
+		height: 252px;
+		
+	}
+
+	.prev,.next{
+		
+		top: 126px;
+		
+	}
+	.next{
+		
+		margin-left: 93%;
+		
+	}
+	.centered{
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-225%)
+	
+	}
+	.about,.home,.gallery{
+	
+	height: 100px;
+	width: 100px;
+	margin-left: 15%;
+	
+}
+	
+}
+
+@media screen and ( min-width : 800px ) and (max-width : 1026px ){
+	
+	.mySlides{
+		height: 252px;
+		
+	}
+	.prev,.next{
+		
+		top: 115px;
+		
+	}
+	.next{
+		
+		margin-left: 93%;
+		
+	}
+	.centered{
+		
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-225%)
+	
+	}
+	.about,.home,.gallery{
+	
+	height: 125px;
+	width: 125px;
+	margin-left: 15%;
+	
+}
+	
+}
+
+@media screen and (min-width:1024px) and (max-width:1080px){
+	
+	.about,.home,.gallery{
+	
+	height: 150px;
+	width: 150px;
+	margin-left: 13%;
+	
+}
+	
+	
+}
+
+@media screen and (min-width:1080px){
+	
+	.mySlides{
+		height: 378px;
+		
+	}
+
+	.prev,.next{
+		
+		top: 189px;
+		
+	}
+	.next{
+		margin-left: 96%;
+		
+	}
+	.centered{
+		/*Adds text to center of slideshow*/
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-300%);
+		-webkit-text-stroke: 1px black;
+		
+	
+	}
+	.about,.home,.gallery{
+	
+	height: 150px;
+	width: 150px;
+	margin-left: 25%;
+	
+}
+	.about{
+
+		margin-left: 9%;
+		
+	}
+	
+}
+@media screen and (min-width:2688px){
+	
+	h2{
+		
+		margin-left: -15%;
+		text-font: 10px; 
+		
+	}
+	.about,.home,.gallery{
+	
+		height: 100px;
+		width: 100px;
+		margin-left: 30%;
+			
+}
+	.about{
+
+		margin-left: 15%;
+		
+	}
+	
+}
