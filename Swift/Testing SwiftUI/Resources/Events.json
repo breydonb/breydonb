@@ -1,0 +1,70 @@
+[
+    {
+        "name" : "Chicago Auto Show",
+        "location" : "McCormick Place",
+        "city" : "Chicago",
+        "state" : "Illinois",
+        "id" : 1,
+        "eventDate" : "February 8-9, 2020",
+        "isFeatured" : true,
+        "isFavorite" : false,
+        "coordinates" : {
+            "latitude" : 41.85051588227039,
+            "longitude": -87.61534316022318
+        },
+        "imageName" : "IMG_0555x1",
+        "eventDescription" : "This trip has Drake, Dryden, Eric, Luke, and Breydon in the river catfishing with our bare hands. An interesting turn for the worst happened and we found and caught Alligator Gar, a species of preditorial fish.",
+        "imageGrid" : "IMG_0645"
+    },
+    {
+        "name" : "St. Louis Trip",
+        "location" : "Downtown St. Louis",
+        "city" : "St. Louis",
+        "state": "Missouri",
+        "id" : 2,
+        "eventDate" : "December 16, 2020",
+        "isFeatured" : false,
+        "isFavorite" : false,
+        "coordinates": {
+            "latitude" : 38.62632608530649,
+            "longitude" : -90.18145247421229
+        },
+        "imageName" : "St.LouisX2",
+        "eventDescription" : "This trip has Drake, Dryden, Eric, Luke, and Breydon in the river catfishing with our bare hands. An interesting turn for the worst happened and we found and caught Alligator Gar, a species of preditorial fish.",
+        "imageGrid" : "IMG_0645"
+    },
+    {
+        "name" : "Hogging Trip",
+        "location" : "River",
+        "city" : "Sadorus",
+        "state": "Illinois",
+        "id" : 3,
+        "eventDate" : "September 1, 2019",
+        "isFeatured" : false,
+        "isFavorite" : false,
+        "coordinates": {
+            "latitude" : 39.963844,
+            "longitude" : -88.363337
+        },
+        "imageName" : "HoggingX2",
+        "eventDescription" : "This trip has Drake, Dryden, Eric, Luke, and Breydon in the river catfishing with our bare hands. An interesting turn for the worst happened and we found and caught Alligator Gar, a species of preditorial fish.",
+        "imageGrid" : "IMG_0645"
+    },
+    {
+        "name" : "Firework Trip",
+        "location" : "Shelton's Fireworks",
+        "city" : "Covington",
+        "state": "Indiana",
+        "id" : 4,
+        "eventDate" : "June 27, 2020",
+        "isFeatured" : false,
+        "isFavorite" : false,
+        "coordinates": {
+            "latitude" : 40.12829334410881,
+            "longitude" : -87.26241461981924
+        },
+        "imageName" : "FireworksX2",
+        "eventDescription" : "This trip has Drake, Dryden, Eric, Luke, and Breydon in the river catfishing with our bare hands. An interesting turn for the worst happened and we found and caught Alligator Gar, a species of preditorial fish.",
+        "imageGrid" : "IMG_0645"
+    }
+]
