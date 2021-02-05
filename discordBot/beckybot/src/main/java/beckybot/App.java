@@ -7,7 +7,7 @@ public class App
 {
     public static void main( String[] args ){
         
-        String sToken = "MzE3MDcwMDUwOTkxMjc2MDMy.WSYMfw.jYZr1urYWXt20YjSYYyX5cgHkSs";
+        String sToken = "";
         DiscordClient client = DiscordClient.create(sToken);
         GatewayDiscordClient gateway = client.login().block();
 
