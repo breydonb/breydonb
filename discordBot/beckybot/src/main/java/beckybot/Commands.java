@@ -24,11 +24,20 @@ class Commands {
                     help(sMessage);
                 }
                 else if (sMessage.getContent().startsWith("/ud")) {
-                    ud(sMessage);
+                    String[] aMessage = sMessage.getContent().toString().split(" ");
+                    System.err.println(aMessage.length);
+                    if(aMessage.length >= 2){
+                        ud(sMessage);
+                    }
+                    else{
+                        MessageChannel channel = sMessage.getChannel().block();
+                        channel.createMessage("Try again with more arguments! Usage: `/ud [the term you are looking up]`").block();
+                    }
+                    
                 }
                 else{
                     MessageChannel channel = sMessage.getChannel().block();
-                    channel.createMessage("Unknown Command: Please feel free to use `/help to find all of the available commands!`").block();
+                    channel.createMessage("Unknown Command: Please feel free to use `/help` to find all of the available commands!").block();
                 }
             }
             /*else if(sMessage.getContent().startsWith("[a-z]")){
