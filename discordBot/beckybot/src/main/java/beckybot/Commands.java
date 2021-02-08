@@ -68,7 +68,7 @@ class Commands {
         try {
             MessageChannel channel = sMessage.getChannel().block();
             channel.createEmbed(spec -> spec.setColor(Color.RED)
-                    .setAuthor("Becky Bot Let Me Smash", "https://www.google.com/",
+                    .setAuthor("Becky Bot", "https://www.google.com/",
                             "https://upload.wikimedia.org/wikipedia/commons/6/63/Icon_Bird_512x512.png")
                     .setTitle("Commands You Can Use").setUrl("https://www.google.com")
                     .setDescription("Based on your role, these are the commands that you have access to: ")
@@ -90,12 +90,12 @@ class Commands {
         //String[] aMessage = sMessage.getContent().toString().split(" ");
         String aMessage = sMessage.getContent().toString().replace("/ud","");
         String t = aMessage.replace(" ","%20");
-        System.err.println(t);
+        //System.err.println(t);
         // channel.createMessage(udQuery.init(aMessage[1])).block();
         channel.createEmbed(spec -> {
             try {
                 spec.setColor(Color.CYAN)
-                        .setAuthor("Becky Bot Let Me Smash", "https://www.google.com",
+                        .setAuthor("Becky Bot", "https://www.google.com",
                                 "https://upload.wikimedia.org/wikipedia/commons/6/63/Icon_Bird_512x512.png")
                         .setTitle("Definition For: " + aMessage)
                         .setDescription(udQuery.init(t))
