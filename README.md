@@ -1,4 +1,4 @@
-<h1>breydonb.github.io</h1>
+<h1 style="text-align: center;">breydonb.github.io</h1>
 
 <h3>Projects with all the code!<h3>
 
