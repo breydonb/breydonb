@@ -1,0 +1,10 @@
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS listUser$$
+CREATE PROCEDURE listUser(in_user_id INT)
+
+BEGIN
+    SELECT * FROM localusers
+END$$
+
+DELIMITER;
