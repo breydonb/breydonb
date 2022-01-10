@@ -2,7 +2,7 @@
 
 This is a website that I developed during my Christmas Break. 
 
-#Helpful commands
+## `Helpful commands`
 
 ### `npm start`
 
