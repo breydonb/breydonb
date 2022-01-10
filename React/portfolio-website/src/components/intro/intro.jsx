@@ -38,7 +38,6 @@ function intro(){
                     </div>
                 </div>
             </div>
-            <div className='spacer layer-wave'></div>
         </>
     )
 }
