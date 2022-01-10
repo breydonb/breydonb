@@ -1,6 +1,8 @@
 # React Portfolio Website
 
-##Helpful commands
+This is a website that I developed during my Christmas Break. 
+
+#Helpful commands
 
 ### `npm start`
 
