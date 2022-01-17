@@ -8,8 +8,9 @@ function Projects(){
     return(
         <>
         <div className="album bg-dark">
-        <div className='spacer layer-peak d-block'></div>
-            <h1 className='text-light text-center'>My Favorite Projects</h1>
+        <div className='spacer layer-wave d-block'></div>
+        <div className='spacer layer-peak d-block position-absolute'></div>
+            <h1 className='text-light text-center position-relative'>My Favorite Projects</h1>
             <br />
             <div className='container'>
                 <div className='row'>

@@ -45,6 +45,14 @@ html, body{
   background-image: url("components/assets/layered-peaks.svg");
 }
 
+.stacked-waves{
+  background-image: url("components/assets/stacked-waves.svg");
+}
+
+.wave{
+  background-image: url("components/assets/wave.svg");
+}
+
 /* For Portrait Image of myself and hexagon border */
 
 .hexagon {
