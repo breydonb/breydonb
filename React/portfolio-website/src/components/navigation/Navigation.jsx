@@ -1,11 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/';
 import '../../App.css';
-import NavLinks from './NavLinks';
 
-import React, { useState } from 'react';
+import Home from "../Home";
+import About from "../About";
+import ProjectPage from "../projects/ProjectPage";
+import Contact from '../Contact';
 
-import { Sling as Hamburger } from 'hamburger-react';
+import React from 'react';
+
+
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 
 /* 
     <Link to='/' className='navbar-brand'>Breydon Brennan</Link>
@@ -14,30 +20,26 @@ import { Sling as Hamburger } from 'hamburger-react';
     <Link to='/contact' className='navbar-brand'>Contact</Link>
 */
 
-const Navigation = () =>{
-    const [ open, setOpen ] = useState(false);
-    
-
+function Navigation(){   
     return (
-        <div>
-            {/* <Hamburger 
-                size={20}
-                toggled={open} toggle={setOpen}
-            />
-            {open && <NavLinks />} */}
-
-            <nav className='navbar navbar-light'>
-                <div>
-                    <Hamburger 
-                        size={20}
-                        toggled={open} toggle={setOpen}
-                        className='snap-right'
-                    />
-                </div>
-                {open && <NavLinks />}
+        <Router>
+            <nav className='d-flex justify-content-around align-items-center'>
+                <Link to='/' className='navbar-brand'>
+                    <img src='img/me-full.jpg' alt="Logo" width='30px' height='30px' class="d-inline-block align-top "/>
+                    <div className='d-inline-block align-top ml-5'>Breydon Brennan</div>
+                </Link>
+                <Link to='/projects' className='navbar-brand'>Projects</Link>
+                <Link to='/about' className='navbar-brand'>About</Link>
+                <Link to='/contact' className='navbar-brand'>Contact</Link>
             </nav>
-
-        </div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects" element={<ProjectPage />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                {/* <Route path="*" element={<About />} /> */}
+            </Routes>
+      </Router>
     )
 }
 

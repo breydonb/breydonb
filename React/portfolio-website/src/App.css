@@ -29,9 +29,18 @@ html, body{
 /* Formatting SVG's for wave effects */
 
 .spacer{
+  aspect-ratio: 1080/200;
+  width: 100%;
+  height: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wave-spacer{
   aspect-ratio: 1080/460;
   width: 100%;
-  height: 100%;
+  height: 50%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -6,7 +6,7 @@ import Data from '../data/Skills.json';
 
 const skills = () => {
     return (
-        <div className='spacer stacked-waves'>
+        <div className='wave-spacer stacked-waves'>
             <div className='d-flex justify-content-center align-items-center'>
                 <h2 className='p-4 text-white border-dark'>My Skills</h2>
             </div>

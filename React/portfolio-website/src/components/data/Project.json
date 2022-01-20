@@ -15,32 +15,32 @@
         "alt": "Thumbnail of lab 6 code from object oriented"
     },
     {
-        "title": "Interfaces and Abstract Classes in Java",
+        "title": "Compound Interest Calculator",
         "desc": "This is a simple discord bot that allows users to request songs on YouTube to be played in my local discord server",
-        "link": "https://github.com/breydonb/breydonb.github.io/tree/master/java/lab6",
+        "link": "https://github.com/breydonb/breydonb.github.io/blob/master/java/FinalProject.java",
         "img": "img/ph.svg",
         "alt": "Thumbnail of lab 6 code from object oriented"
     },
     {
-        "title": "Interfaces and Abstract Classes in Java",
-        "desc": "This is a simple discord bot that allows users to request songs on YouTube to be played in my local discord server",
-        "link": "https://github.com/breydonb/breydonb.github.io/tree/master/java/lab6",
+        "title": "Trip Collage iOS App",
+        "desc": "I made this application during my freshman year of college by referencing Apple's Documentation. This uses Apple Map's API to show where the events where my friends and I have went",
+        "link": "https://github.com/breydonb/breydonb.github.io/tree/master/Swift/Testing%20SwiftUI",
         "img": "img/ph.svg",
         "alt": "Thumbnail of lab 6 code from object oriented"
     }
     ,
     {
-        "title": "Interfaces and Abstract Classes in Java",
-        "desc": "This is a simple discord bot that allows users to request songs on YouTube to be played in my local discord server",
-        "link": "https://github.com/breydonb/breydonb.github.io/tree/master/java/lab6",
+        "title": "Leetcode Algorithm Techniques in Python",
+        "desc": "Preparing for interviews for internships in software development, I started to work on various algorithms. These algorithms include various sorting algorithm",
+        "link": "https://github.com/breydonb/breydonb.github.io/tree/master/Python/leelcode",
         "img": "img/ph.svg",
         "alt": "Thumbnail of lab 6 code from object oriented"
     }
     ,
     {
-        "title": "Interfaces and Abstract Classes in Java",
-        "desc": "This is a simple discord bot that allows users to request songs on YouTube to be played in my local discord server",
-        "link": "https://github.com/breydonb/breydonb.github.io/tree/master/java/lab6",
+        "title": "MySQL Final Project",
+        "desc": "We took the approach as a Database Administrator at a startup called Amazon and had to create the database for them. This includes a Sales table, Products table, and Customers table. ",
+        "link": "https://github.com/breydonb/breydonb.github.io/tree/master/MySQL/FinalProject",
         "img": "img/ph.svg",
         "alt": "Thumbnail of lab 6 code from object oriented"
     }
