@@ -10,6 +10,21 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Contact from './components/Contact';
 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBx5iO2zA3DnWx7swuU6uvJFTnUo48GztE",
+  authDomain: "portfolio-breydonb.firebaseapp.com",
+  projectId: "portfolio-breydonb",
+  storageBucket: "portfolio-breydonb.appspot.com",
+  messagingSenderId: "395264269390",
+  appId: "1:395264269390:web:2d9bf8d4ddc24a6977371f",
+  measurementId: "G-P821T6KLCS"
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 function App (){
   return (
