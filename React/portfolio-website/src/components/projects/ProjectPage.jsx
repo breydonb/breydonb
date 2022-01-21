@@ -16,7 +16,7 @@ function ProjectPage() {
                                         <div className='card-body text-light'>
                                             <h5 class="card-title">{project.title}</h5>
                                             <p className='card-text'>{project.desc}</p>
-                                            <a href={project.link} class="btn btn-primary btn-lg active" role="button" aria-pressed="true">See the Source Code!</a>
+                                            <a href={project.link} class="btn btn-primary btn-lg active" role="button" aria-pressed="true" target="_blank" rel="noreferrer">See the Source Code!</a>
                                         </div>
                                     </div>
                                 </div>

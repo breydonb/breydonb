@@ -32,7 +32,7 @@ function intro(){
                     <div className='d-flex justify-content-center'>
                         <div className='hexagon'>
                             <div className='hex-background'>
-                                    <img src='img/me-full.jpg' />
+                                    <img src='img/me-full.jpg' alt='Breydon Brennan'/>
                             </div>
                         </div>
                     </div>
