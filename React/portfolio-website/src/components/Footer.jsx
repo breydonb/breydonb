@@ -6,7 +6,7 @@ function Footer(){
         <div className='d-flex justify-content-center '>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a href='https://www.github.com/breydonb/breydonb.github.io' className='nav-link' rel="noreferrer" target='_blank'>
+                    <a href='https://www.github.com/breydonb/breydonb' className='nav-link' rel="noreferrer" target='_blank'>
                         <Github />
                     </a>
                 </li>
