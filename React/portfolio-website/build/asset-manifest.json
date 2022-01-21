@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f24d273.css",
-    "main.js": "/static/js/main.bd02233f.js",
-    "static/media/stacked-waves.svg": "/static/media/stacked-waves.251dd6409d889c2bf5a5.svg",
-    "static/media/layered-waves.svg": "/static/media/layered-waves.68e1a7283fc932b66431.svg",
+    "main.css": "/static/css/main.30fa6688.css",
+    "main.js": "/static/js/main.0cf54b3c.js",
+    "static/media/layered-waves.svg": "/static/media/layered-waves.6f7f86a23a293e9747cd.svg",
+    "static/media/stacked-waves.svg": "/static/media/stacked-waves.4d62c285a5ead60bddd6.svg",
     "static/media/wave.svg": "/static/media/wave.c66be8add75fc6acf5fc.svg",
+    "static/media/layered-peaks.svg": "/static/media/layered-peaks.ac57542cd676b80eeecf.svg",
     "index.html": "/index.html",
-    "static/media/layered-peaks.svg": "/static/media/layered-peaks.60e90b098d7ff0d694df.svg",
-    "main.3f24d273.css.map": "/static/css/main.3f24d273.css.map",
-    "main.bd02233f.js.map": "/static/js/main.bd02233f.js.map"
+    "main.30fa6688.css.map": "/static/css/main.30fa6688.css.map",
+    "main.0cf54b3c.js.map": "/static/js/main.0cf54b3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f24d273.css",
-    "static/js/main.bd02233f.js"
+    "static/css/main.30fa6688.css",
+    "static/js/main.0cf54b3c.js"
   ]
 }
