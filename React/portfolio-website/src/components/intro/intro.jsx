@@ -21,7 +21,7 @@ function intro(){
             <div className='container'>
                 <div className='row justify-content-around'>
                     <div className='col'>
-                        <div className='d-flex flex-column p-5'>
+                        <div className='d-flex flex-column padding-text'>
                             <h2 id="i-intro">Hello, my name is </h2>
                             <h1 id="h-100">Breydon Brennan!</h1>
                             <div className='d-flex justify-content-left align-items-center'>
@@ -36,7 +36,7 @@ function intro(){
                                     />
                                 </h2>
                             </div>
-                            <p className='w-50'>
+                            <p className='p-text'>
                                 I am a current junior attending Eastern Illinois University, majoring in Computer Information Technology and minoring in Computer Science. I enjoy working on many programming projects, leading to the reason why I made this page. All my projects showcased on this page were exhilarating, challenging, and overall helpful to my learning experience. I have put in a great amount of time and love into these projects, so feel free to scroll down and check them out!
                             </p>
                         </div>

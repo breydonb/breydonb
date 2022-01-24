@@ -29,15 +29,13 @@ const analytics = getAnalytics(app);
 function App (){
   return (
     <Router>
-      <nav className='d-flex justify-content-around align-items-center'>
-        <Link to='/' className='navbar-brand'>
-          <img src='img/me-full.jpg' alt="Logo" width='30px' height='30px' class="d-inline-block align-top "/>
-          <div className='d-inline-block align-top ml-5'>Breydon Brennan</div>
-        </Link>
+      <nav className='navbar navbar-expand-sm navbar-light bg-light'>
+        <Link to='/' className='navbar-brand'>Breydon Brennan</Link>
         <Link to='/projects' className='navbar-brand'>Projects</Link>
         <Link to='/about' className='navbar-brand'>About</Link>
         <Link to='/contact' className='navbar-brand'>Contact</Link>
       </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectPage />} />

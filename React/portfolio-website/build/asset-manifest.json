@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8dcb3c41.css",
+    "main.js": "/static/js/main.e8a3e518.js",
+    "static/media/layered-waves.svg": "/static/media/layered-waves.6f7f86a23a293e9747cd.svg",
+    "static/media/stacked-waves.svg": "/static/media/stacked-waves.4d62c285a5ead60bddd6.svg",
+    "static/media/wave.svg": "/static/media/wave.c66be8add75fc6acf5fc.svg",
+    "static/media/layered-peaks.svg": "/static/media/layered-peaks.ac57542cd676b80eeecf.svg",
+    "index.html": "/index.html",
+    "main.8dcb3c41.css.map": "/static/css/main.8dcb3c41.css.map",
+    "main.e8a3e518.js.map": "/static/js/main.e8a3e518.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8dcb3c41.css",
+    "static/js/main.e8a3e518.js"
+  ]
+}
