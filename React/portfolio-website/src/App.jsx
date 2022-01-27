@@ -1,15 +1,18 @@
 import React from 'react';
+import Footer from './components/Footer';
+
+import { Switch, Route, Routes,Link } from 'react-router-dom';
+
 import Home from "./components/Home"
 import About from "./components/About"
+import Contact from "./components/Contact"
 import ProjectPage from "./components/projects/ProjectPage"
-import Footer from './components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/';
 import './App.css';
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Contact from './components/Contact';
+import { BrowserRouter as Router} from "react-router-dom";
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -46,6 +49,10 @@ function App (){
       </Routes>
       <Footer />
     </Router>
+    // <Router>
+    //   <Navigation />
+    //   <Footer />
+    // </Router>
   )
 }
 
