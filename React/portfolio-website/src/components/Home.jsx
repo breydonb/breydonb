@@ -1,7 +1,7 @@
 import Intro from "./intro/intro";
 import Projects from "./projects/Projects";
 import Skills from './skills/skills';
-import Footer from './Footer';
+
 
 function Home() {
     return (
@@ -9,7 +9,6 @@ function Home() {
             <Intro />
             <Projects />
             <Skills />
-            <Footer />
         </div>
     )
 }
