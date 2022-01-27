@@ -2,6 +2,7 @@ import React from 'react';
 import Home from "./components/Home"
 import About from "./components/About"
 import ProjectPage from "./components/projects/ProjectPage"
+import Footer from './components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/';
@@ -43,6 +44,7 @@ function App (){
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<About />} />
       </Routes>
+      <Footer />
     </Router>
   )
 }
