@@ -1,9 +1,8 @@
 import math
 
-def NewtonsApproximation(x,guess):
-    bool = True
-    tolerance = 0.001
-    avg = guess
+def NewtonsApproximation(n,guess) -> float:
+    # root = 0.5 * (X + (N / X)) where X is the guess and N is the value
+    tolerance = 0.000001 
 
     # we first calculate the power of the tolerance
     # i.e 0.001 = 1 *  1- ^ -3
@@ -12,41 +11,32 @@ def NewtonsApproximation(x,guess):
     # Then we convert to absolute values and round
 
     base10 = abs(math.floor(base10))
-    answer = round(math.sqrt(x), base10)
+    answer = round(math.sqrt(n), base10)
 
-    while bool:     
+    while True:     
 
         # We then calculate the quotent and average as per Newton's approximation    
 
-        quotient = float(x / avg)
-        avg = (quotient + avg + guess) / x
-
-        # we then round off the values calculated based on the base10 values
-
-        
-        avg = round(avg,(base10))
+        root = 0.5 * (guess + (n / guess))
 
         # Entirely for testing!
+        # print("Average: " + str(root))
+        # print("exponents: "+str(base10))
+        # print("Rounded Average: " + str(round(root, base10)))
+        # print("Rounded Answer: " + str(round(answer, base10)))
 
-        print("Average: " + str(avg))
-        print("exponents: "+str(base10))
-        print("Rounded Average: " + str(round(avg, base10)))
-        print("Rounded Answer: " + str(answer))
-
-        
         # Lastly, we return the value if the rounded average is equal to the rounded answer
 
-        if(avg == answer):
-            bool = False
-            return avg
+        if(round(guess,base10) == round(answer,base10)):
+            break
 
         # else, we set the guess equal to the average further iterate
 
         else:
-            guess = avg
-        print()
+            guess = root
+    return round(root,base10)
         
 def main():
-    print("Newton's Approximation: " + str(NewtonsApproximation(3,1.0)))
+    print("Newton's Approximation: " + str(NewtonsApproximation(100,10.0)))
 
 main()
