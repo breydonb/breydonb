@@ -3,7 +3,7 @@ import { Github, Linkedin, StackOverflow } from 'react-bootstrap-icons';
 
 function Footer(){
     return(
-        <div className='d-flex justify-content-center '>
+        <div className='d-flex justify-content-center'>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
                     <a href='https://www.github.com/breydonb/breydonb' className='nav-link' rel="noreferrer" target='_blank'>

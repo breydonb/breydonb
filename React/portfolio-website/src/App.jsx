@@ -1,12 +1,16 @@
 import React from 'react';
 import Footer from './components/Footer';
 
-import { Switch, Route, Routes,Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import {LinkContainer} from 'react-router-bootstrap'
+import { Container, Navbar, Nav, Offcanvas, NavDropdown } from 'react-bootstrap';
 
 import Home from "./components/Home"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import ProjectPage from "./components/projects/ProjectPage"
+import Blog from './components/blog/Blog';
+import ErrorNotFound from './components/ErrorNotFound';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/';
@@ -33,26 +37,45 @@ const analytics = getAnalytics(app);
 function App (){
   return (
     <Router>
-      <nav className='navbar navbar-expand-sm navbar-light bg-light'>
-        <Link to='/' className='navbar-brand'>Breydon Brennan</Link>
-        <Link to='/projects' className='navbar-brand'>Projects</Link>
-        <Link to='/about' className='navbar-brand'>About</Link>
-        <Link to='/contact' className='navbar-brand'>Contact</Link>
-      </nav>
+      <Navbar collapseOnSelect bg="dark" variant='dark' expand="lg">
+        <Container>
+          <Navbar.Brand>Breydon Brennan</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <LinkContainer to="/">
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/projects">
+                <Nav.Link >Projects</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/about">
+                <Nav.Link>About</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/blogs">
+                <Nav.Link>Blog Posts</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/contact">
+                <Nav.Link>Contact</Nav.Link>
+              </LinkContainer>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<About />} />
+        <Route path="/blogs" element={<Blog />} />
+        <Route path="*" element={<ErrorNotFound />} />
       </Routes>
+
       <Footer />
+
     </Router>
-    // <Router>
-    //   <Navigation />
-    //   <Footer />
-    // </Router>
+
   )
 }
 
