@@ -1,0 +1,27 @@
+[{
+    "id": 1,
+    "task": "Give dog a bath",
+    "description": "Be sure to use warm water and use Sparky's special bacon scented soap!",
+    "complete": false
+  }, {
+    "id": 2,
+    "task": "Do laundry",
+    "description": "Still need to separate colored from whites and use tide pods",
+    "complete": false
+  }, {
+    "id": 3,
+    "task": "Vacuum floor",
+    "description": "Be sure to clean out the filter when done",
+    "complete": false
+  }, {
+    "id": 4,
+    "task": "Feed cat",
+    "description": "Kibbles is on medication for her allergies so be sure to give her those too",
+    "complete": false
+  }, {
+    "id": 5,
+    "task": "Change light bulbs",
+    "description": "Phillips Hue bulbs are in the bag in the living room",
+    "complete": false
+  }]
+ 
