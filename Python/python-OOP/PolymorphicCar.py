@@ -6,7 +6,9 @@ class PolymorphicCar:
     make = ""
     model= ""
     year = 0
+
     ## __init__ acts like our constructor
+
     def __init__(self, make,model,year):
         self.make = make
         self.model = model
@@ -26,4 +28,5 @@ class PolymorphicCar:
 
 class Toyota(PolymorphicCar):
     def getHorsePower(self) -> float:
-        return 
+        return 172.5
+    

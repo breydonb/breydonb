@@ -1,6 +1,22 @@
 # React Portfolio Website
 
-This is a website that I developed during my Christmas Break. 
+This is a website that I developed during my Christmas Break and throughout my fourth semester at EIU. This serves as a capstone project for my college career. The skills and languages used are ReactJS, CSS, C# ASP.NET, Microsoft SQL, Firebase, & Docker.
+
+While this serves as a portfolio page to display my projects and skills, it also serves as a personal "blog" to write about various programming tools I found, music I like, etc.
+
+There are several reasons as to why I picked this as a project. Here are some of the reasons:
+
+1. I needed a portfolio page
+2. I wanted to learn how ReactJS works (React Hooks, maps, Single Page Webpages)
+3. I wanted to learn how RESTful APIs work and how to develop them
+4. I wanted to make a CRUD using ASP.NET and ReactJS
+5. I want to combine music and programming together
+
+### Goals for this project
+
+- Dockerize Project
+
+
 
 ## `Helpful commands`
 
