@@ -31,7 +31,7 @@ function Blog(){
     console.log(data)
 
     return(
-        <div className='blog-container'>
+        <div className='blog-container container'>
             {data.map(post =>(
                     <div className='blog-card'>
                         <img src="img/ph.svg" className='card-img' width='600'/>
