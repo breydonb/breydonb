@@ -10,6 +10,7 @@ import { Button, Badge} from 'react-bootstrap';
 
 function Blog(){
     const [ data, setData ] = useState([]);
+    const [ error, setErrorCode ] = useState([""])
 
     useEffect( () => {
         loadBlogs();
@@ -23,13 +24,15 @@ function Blog(){
                 .then(receivedData => setData(receivedData))
         }
         catch(e){
-            console.log(e)
+            console.error(e)
         }
     }
 
     if(data.length === 0){
         return(
-            <div className='text-center'>Error loading the data</div>
+            <div className='container'>
+                <p className='text-center'>Error Reading the Data</p>
+            </div>
         )
     }
 
