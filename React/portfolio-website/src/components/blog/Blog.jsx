@@ -27,8 +27,11 @@ function Blog(){
         }
     }
 
-
-    console.log(data)
+    if(data.length === 0){
+        return(
+            <div className='text-center'>Error loading the data</div>
+        )
+    }
 
     return(
         <div className='blog-container'>
