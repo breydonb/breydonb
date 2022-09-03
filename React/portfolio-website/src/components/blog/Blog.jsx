@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import '../../App.css';
 
+import { ErrorNotFound } from '../ErrorNotFound'
+
 import { API_VAR } from '../../api-var';
 import { Button, Badge} from 'react-bootstrap';
 import axios from 'axios';
@@ -11,9 +13,10 @@ import axios from 'axios';
 
 function Blog(){
     const [ data, setData ] = useState([]);
+    const [ error, setErrorCode ] = useState("");
 
     useEffect( () => {
-        axios.get("https://localhost:44371/api/blog")
+        axios.get("https://localhost:44371/api/blo")
             .then(res => {
                 // console.log(res.data)
                 setData(res.data)
@@ -27,10 +30,18 @@ function Blog(){
                 else{
                     console.log(err)
                 }
+                setErrorCode(err)
             })
     }, [])
 
+
+    if(error){
+        return (
+            <ErrorNotFound />
+        )
+    }
     return(
+
         <div className='blog-container'>
             {data.map(post =>(
                     <div className='blog-card' key={post.BlogId}>
