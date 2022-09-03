@@ -16,7 +16,7 @@ function Blog(){
     const [ error, setErrorCode ] = useState("");
 
     useEffect( () => {
-        axios.get("https://localhost:44371/api/blo")
+        axios.get("https://localhost:44371/api/blog")
             .then(res => {
                 // console.log(res.data)
                 setData(res.data)
