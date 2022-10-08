@@ -45,42 +45,46 @@ function SignUp() {
     })
 
     return (
-    <Card className='d-flex align-items-center justify-content-center'>
-        <h2>Sign Up</h2>
-        <p>Already have an account? <Link to="/login" className='underline'>Login</Link> here</p>
-        <Form onSubmit={handleSubmit}>
-            <Form.Group className='mb-3' controlId='formEmailAddress'>
-                <Form.Label>Email Address</Form.Label>
-                <Form.Control
-                    type='email'
-                    placeholder='Enter email'
-                    value={email}
-                    onChange={(e) => {setEmail(e.target.value)}}
-                />
-            </Form.Group>
-            <Form.Group className='mb-3' controlId='formPassword'>
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                    type='password'
-                    placeholder='Enter password'
-                    value={password}
-                    onChange={(e) => {setPassword(e.target.value)}}/>
-            </Form.Group>
-            <Form.Group className='mb-3' controlId='formConfirmPassword'>
-                <Form.Label>Confirm Your Password</Form.Label>
-                <Form.Control
-                    type='password'
-                    placeholder='Confirm your password'
-                    value={confirmPassword}
-                    onChange={handleConfirmPassword}
-                />
-            </Form.Group>
-            {isMatch ? '' : <div>Passwords must match</div>}
-            <p>Your information will never be sent to any third-party sites</p>
-            <Button variant='primary' type='submit' disabled={!isMatch} >Submit</Button>
-            {error ? <ErrorAlert errorMessage={error}/> : ''}
-        </Form>
-    </Card>
+        <div className='d-flex justify-content-center p-3'>
+            <Card style={{ width: '24rem' }} className='d-flex align-items-center justify-content-center'>
+                <Card.Body>
+                <h2 className='text-center'>Sign Up</h2>
+                <p>Already have an account? <Link to="/login" className='underline'>Login</Link> here</p>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group className='mb-3' controlId='formEmailAddress'>
+                        <Form.Label>Email Address</Form.Label>
+                        <Form.Control
+                            type='email'
+                            placeholder='Enter email'
+                            value={email}
+                            onChange={(e) => {setEmail(e.target.value)}}
+                        />
+                    </Form.Group>
+                    <Form.Group className='mb-3' controlId='formPassword'>
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                            type='password'
+                            placeholder='Enter password'
+                            value={password}
+                            onChange={(e) => {setPassword(e.target.value)}}/>
+                    </Form.Group>
+                    <Form.Group className='mb-3' controlId='formConfirmPassword'>
+                        <Form.Label>Confirm Your Password</Form.Label>
+                        <Form.Control
+                            type='password'
+                            placeholder='Confirm your password'
+                            value={confirmPassword}
+                            onChange={handleConfirmPassword}
+                        />
+                    </Form.Group>
+                    {isMatch ? '' : <div>Passwords must match</div>}
+                    <Card.Text>Your information will never be sent to any third-party sites</Card.Text>
+                    <Button variant='primary' type='submit' disabled={!isMatch} >Submit</Button>
+                    {error ? <ErrorAlert errorMessage={error}/> : ''}
+                </Form>
+                </Card.Body>
+            </Card>
+        </div>
     
     )
 }

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Card } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../contexts/AuthContext'
 import ErrorAlert from '../ErrorHandling/ErrorAlert';
 
@@ -31,6 +31,7 @@ function Login() {
         <Card style={{ width: '24rem' }} className='d-flex align-items-center justify-content-center'>
             <Card.Body>
                 <Card.Title><h2>Log In</h2></Card.Title>
+                <Card.Text>Don't have an account? <Link to="/signup" className='underline'>Sign Up</Link> here</Card.Text>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className='mb-3' controlId='formEmailAddress'>
                         <Form.Label>Email Address</Form.Label>
