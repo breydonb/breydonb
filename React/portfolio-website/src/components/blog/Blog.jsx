@@ -1,4 +1,5 @@
 import { React, useEffect, useState} from 'react';
+import { axios } from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -10,30 +11,24 @@ import { API_VAR } from '../../api-var';
 import { Button, Badge} from 'react-bootstrap';
 import axios from 'axios';
 
-
 function Blog(){
     const [ data, setData ] = useState([]);
-    const [ error, setErrorCode ] = useState("");
+    const [ error, setErrorCode ] = useState([""])
 
     useEffect( () => {
-        axios.get("https://localhost:44371/api/blog")
-            .then(res => {
-                // console.log(res.data)
-                setData(res.data)
-            })
-            .catch(function (err) {
-                if(err.response) {
-                    console.log(err.response.data);
-                    console.log(err.response.status);
-                    console.log(err.response.headers);
-                }
-                else{
-                    console.log(err)
-                }
-                setErrorCode(err)
-            })
+        loadBlogs()
     }, [])
 
+    const loadBlogs = async () => {
+        try{
+            await fetch(API_VAR.BLOG_URL)
+                .then(response => response.json())
+                .then(receivedData => setData(receivedData))
+        }
+        catch(e){
+            console.error(e)
+        }
+    }
 
     if(error){
         return (
