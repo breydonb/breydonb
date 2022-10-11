@@ -44,6 +44,7 @@ function Account() {
                         <Card.Title>
                             <h2>Profile</h2>
                         </Card.Title>
+                        
                     </Card> 
                 </Col>
                 <Col sm={6}>

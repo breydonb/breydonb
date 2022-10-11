@@ -69,7 +69,9 @@ function NavigationBar() {
                                 <Nav.Link black>Account Settings</Nav.Link>
                             </LinkContainer>
                         </NavDropdown.Item>
-                        <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
+                        <NavDropdown.Item>
+                            <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
+                        </NavDropdown.Item>
                     </NavDropdown>
                      
                 : 
