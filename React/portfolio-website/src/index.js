@@ -5,6 +5,8 @@ import App from './App';
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
 import { AuthContextProvider } from './contexts/AuthContext';
+import { getFirestore } from "firebase/firestore";
+import { FirestoreContextProvider } from './contexts/FirestoreContext';
 
 
 export const firebaseConfig = initializeApp({
@@ -18,11 +20,14 @@ export const firebaseConfig = initializeApp({
 });
 
 export const auth = getAuth(firebaseConfig);
+export const db = getFirestore(firebaseConfig);
 
 ReactDOM.render(
     <React.StrictMode>
       <AuthContextProvider>
-        <App />
+        <FirestoreContextProvider>
+          <App />
+        </FirestoreContextProvider>
       </AuthContextProvider>
     </React.StrictMode>,
   document.getElementById('root')

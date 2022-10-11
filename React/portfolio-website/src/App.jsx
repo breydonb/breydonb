@@ -16,9 +16,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/';
 import './App.css';
 
-import { } from "react-router-dom";
 import NavigationBar from './components/NavigationBar';
-import Account from './components/Account';
+import Account from './components/authentication/Account';
 
 import { UserAuth } from './contexts/AuthContext';
 

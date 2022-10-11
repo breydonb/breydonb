@@ -1,21 +1,39 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Container, Navbar, Nav, Offcanvas, NavDropdown } from 'react-bootstrap';
-import {UserAuth} from '../contexts/AuthContext'
+import { Container, Navbar, Nav,  NavDropdown } from 'react-bootstrap';
+import { UserAuth } from '../contexts/AuthContext'
 import { useNavigate } from 'react-router-dom';
+import { FirestoreQueryContext } from '../contexts/FirestoreContext';
 
 function NavigationBar() {
 
-    const { user, logout } = UserAuth();
+    const { user, logout, updateUserProfile} = UserAuth();
+    const { getUserInformation, displayName, photoURL } = FirestoreQueryContext();
     const [error, setError] = useState('')
-    
+    const[title, setTitle] = useState('test');
     const navigate = useNavigate();
+
+    useEffect(()=>{
+        try{
+            if(user){
+                getUserInformation(user.uid)
+                const title = `Welcome, ${displayName}`
+                setTitle(title)
+            }
+        }
+        catch(e){
+            console.error(e.message)
+        }
+        
+    },[user,getUserInformation])
+
     const handleLogout = async (e) =>{
         try{
             await logout()
             navigate('/')
         }catch(e){
             setError(e.message)
+            console.log(error)
         }
         
     }
@@ -45,8 +63,7 @@ function NavigationBar() {
                 </Nav>
                 <Nav>
                 {user ?
-                    
-                    <NavDropdown menuVariant='dark' title={user && user.email}>
+                    <NavDropdown menuVariant='dark' title={title}>
                         <NavDropdown.Item>
                             <LinkContainer to="/account">
                                 <Nav.Link black>Account Settings</Nav.Link>
@@ -56,11 +73,13 @@ function NavigationBar() {
                     </NavDropdown>
                      
                 : 
-                    <><LinkContainer to="/signup">
+                    <>
+                        <LinkContainer to="/signup">
                                 <Nav.Link>{user ? '' : "Sign Up"}</Nav.Link>
-                            </LinkContainer><LinkContainer to="/login">
-                                    <Nav.Link>{user ? '' : "Log In"}</Nav.Link>
-                                </LinkContainer></>
+                        </LinkContainer><LinkContainer to="/login">
+                            <Nav.Link>{user ? '' : "Log In"}</Nav.Link>
+                        </LinkContainer>
+                        </>
                 }
                 </Nav>
             </Navbar.Collapse>

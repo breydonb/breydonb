@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { UserAuth } from '../../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 import ErrorAlert from '../ErrorHandling/ErrorAlert';
+import { FirestoreQueryContext } from '../../contexts/FirestoreContext'
 
 
 function SignUp() {
@@ -12,10 +13,14 @@ function SignUp() {
     const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
     const[confirmPassword, setConfirmPassword] = useState('');
+    const[fullName, setFullName] = useState('');
+    const[userName, setUserName] = useState('');
     const[error, setError] = useState('');
     const[isMatch, setIsMatch] = useState(false);
+    const[uid, setUserId] = useState('');
 
-    const { createUser } = UserAuth();
+    const { createUser, user, updateUserProfile } = UserAuth();
+    const { createUserInformation } = FirestoreQueryContext();
     const navigate = useNavigate()
 
     const handleConfirmPassword = (e) =>{
@@ -28,12 +33,21 @@ function SignUp() {
         try{
             await createUser(email, password);
             navigate('/');
+            
         }catch(e){
             setError(e.message);
             console.log(error);
         }
         
     }
+
+    useEffect(() => {
+        if(user){
+            setUserId(user.uid)
+            createUserInformation(fullName, false, "", userName, uid)
+            updateUserProfile(fullName, "")
+        }
+    }, [user, createUserInformation, fullName, userName, uid, updateUserProfile])
 
     useEffect(() =>{
         if(password === confirmPassword){
@@ -42,7 +56,8 @@ function SignUp() {
         else{
             setIsMatch(false);
         }
-    })
+    }, [password, confirmPassword])
+
 
     return (
         <div className='d-flex justify-content-center p-3'>
@@ -51,6 +66,24 @@ function SignUp() {
                 <h2 className='text-center'>Sign Up</h2>
                 <p>Already have an account? <Link to="/login" className='underline'>Login</Link> here</p>
                 <Form onSubmit={handleSubmit}>
+                    <Form.Group className='mb-3' controlId='formFullName'>
+                        <Form.Label>Full Name</Form.Label>
+                        <Form.Control
+                            type='text'
+                            placeholder='Enter full name'
+                            value={fullName}
+                            onChange={(e) => {setFullName(e.target.value)}}
+                        />
+                    </Form.Group>
+                    <Form.Group className='mb-3' controlId='formUserName'>
+                        <Form.Label>User Name</Form.Label>
+                        <Form.Control
+                            type='text'
+                            placeholder='Enter user name'
+                            value={userName}
+                            onChange={(e) => {setUserName(e.target.value)}}
+                        />
+                    </Form.Group>
                     <Form.Group className='mb-3' controlId='formEmailAddress'>
                         <Form.Label>Email Address</Form.Label>
                         <Form.Control
