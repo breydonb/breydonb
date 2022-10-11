@@ -4,9 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import '../../App.css';
 
-import { ErrorNotFound } from '../ErrorNotFound'
+import { ErrorNotFound } from '../ErrorHandling/ErrorNotFound'
 
-import { API_VAR } from '../../api-var';
 import { Button, Badge} from 'react-bootstrap';
 import axios from 'axios';
 
