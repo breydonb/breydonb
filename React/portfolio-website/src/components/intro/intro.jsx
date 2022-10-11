@@ -1,23 +1,47 @@
 import '../../App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Typewriter from 'typewriter-effect';
+import { Row, Container, Col } from 'react-bootstrap';
 
 // <div className='spacer layer-wave'></div>
+
+export function newIntro(){
+    return(
+        <Container className="d-flex justify-content-center p-4">
+            <Row className="p-3">
+                <Col sm={12} md={12} lg={6}>
+                    <h2 id="i-intro">Hello, my name is </h2>
+                    <h1 id="h-100">Breydon Brennan!</h1>
+
+                    <div className='d-flex flex-columns'>
+                        <h2>I am</h2>
+                        <h2>
+                            <Typewriter
+                                    options={{
+                                        strings: ["a student", "an intern","a coding enthusiast"],
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                            />
+                        </h2>
+                    </div>
+
+                    <p className=''>
+                        I am a current junior attending Eastern Illinois University, majoring in Computer Information Technology and minoring in Computer Science. I enjoy working on many programming projects, leading to the reason why I made this page. All my projects showcased on this page were exhilarating, challenging, and overall helpful to my learning experience. I have put in a great amount of time and love into these projects, so feel free to scroll down and check them out!
+                    </p>
+                </Col>
+                <Col sm={0} md={0} lg={6}>
+                    
+                </Col>
+            </Row>
+            
+        </Container>
+    )
+}
 
 function intro(){
     return (
         <>
-            {/*                
-                <div className='p-5'>
-                    <div className='d-flex justify-content-center'>
-                        <div className='hexagon'>
-                            <div className='hex-background'>
-                                    <img src='img/me-full.jpg' alt='Breydon Brennan'/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
             <div className='container'>
                 <div className='row justify-content-around'>
                     <div className='col'>
@@ -47,4 +71,4 @@ function intro(){
     )
 }
 
-export default intro
+export default newIntro
