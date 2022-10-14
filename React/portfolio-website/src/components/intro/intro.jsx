@@ -2,26 +2,33 @@ import '../../App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Typewriter from 'typewriter-effect';
 import { Row, Container, Col } from 'react-bootstrap';
+import styled, { keyframes } from "styled-components";
+import { bounce, fadeIn} from "react-animations";
 
 // <div className='spacer layer-wave'></div>
-
+const Bounce = styled.div`animation: 2s ${keyframes `${bounce}`} `;
+const FadeIn = styled.div`animation: 2s ${keyframes `${fadeIn}`}`
 export function newIntro(){
     return(
         <Container className="d-flex justify-content-center p-4">
             <Row className="p-3">
                 <Col sm={12} md={12} lg={6}>
-                    <h2 id="i-intro">Hello, my name is </h2>
-                    <h1 id="h-100">Breydon Brennan!</h1>
+                    <Bounce>
+                        <h2>Hello, my name is </h2>
+                    </Bounce>
+                    <FadeIn>
+                        <h1 id="h-100">Breydon Brennan</h1>
+                    </FadeIn>
 
                     <div className='d-flex flex-columns'>
                         <h2>I am</h2>
                         <h2>
                             <Typewriter
-                                    options={{
-                                        strings: ["a student", "an intern","a coding enthusiast"],
-                                        autoStart: true,
-                                        loop: true,
-                                    }}
+                                options={{
+                                    strings: ["a student", "an intern","a coding enthusiast"],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
                             />
                         </h2>
                     </div>
