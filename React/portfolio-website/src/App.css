@@ -104,6 +104,20 @@ html, body{
   background-image: url("components/assets/wave.svg");
 }
 
+#first-svg{
+  animation: scrollLogoOnCanvas 6s infinite;
+}
+
+#second-svg{
+  animation: scrollLogoOnCanvas 6s 2s infinite;
+  opacity: 0;
+}
+
+#third-svg{
+  animation: scrollLogoOnCanvas 6s 4s infinite;
+  opacity: 0;
+}
+
 .p-text{
   width: 45%;
 }
@@ -146,6 +160,26 @@ html, body{
     .blog-container{
       grid-template-columns: none;
     }
+}
+
+@keyframes scrollLogoOnCanvas {
+  0%{
+    opacity: 0;
+  }
+  33%{
+    opacity: 1;
+    transform: translateX(50%);
+  }
+  67%{
+    opacity: 0;
+  }
+  75%{
+    transform: translateX(300%);
+  }
+  to{
+    opacity: 0;
+    transform: translateX(-50%);
+  }
 }
 
 /* For Portrait Image of myself and hexagon border */

@@ -17,7 +17,7 @@ function Footer(){
                 </li>
                 <li class="nav-item">
                     <a href='https://stackoverflow.com/users/17776768/breydonb' className='nav-link' rel="noreferrer" target='_blank'>
-                        <StackOverflow />
+                        <StackOverflow/>
                     </a>
                 </li>
             </ul>
