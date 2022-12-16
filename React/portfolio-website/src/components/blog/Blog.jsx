@@ -6,7 +6,7 @@ import '../../App.css';
 
 import { ErrorNotFound } from '../ErrorHandling/ErrorNotFound'
 
-import { API_VAR } from '../../api-var';
+// import { API_VAR } from '../../api-var';
 import { Button, Badge, Container, Row, Col} from 'react-bootstrap';
 
 
