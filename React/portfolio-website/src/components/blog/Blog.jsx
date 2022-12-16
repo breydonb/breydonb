@@ -4,36 +4,34 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import '../../App.css';
 
-import { ErrorNotFound } from '../ErrorNotFound'
+import { ErrorNotFound } from '../ErrorHandling/ErrorNotFound'
 
 import { API_VAR } from '../../api-var';
 import { Button, Badge, Container, Row, Col} from 'react-bootstrap';
-import { Button, Badge} from 'react-bootstrap';
-import axios from 'axios';
 
 
 function Blog(){
     const [ data, setData ] = useState([]);
     const [ error, setErrorCode ] = useState("");
 
-    useEffect( () => {
-        axios.get("https://localhost:44371/api/blog")
-            .then(res => {
-                // console.log(res.data)
-                setData(res.data)
-            })
-            .catch(function (err) {
-                if(err.response) {
-                    console.log(err.response.data);
-                    console.log(err.response.status);
-                    console.log(err.response.headers);
-                }
-                else{
-                    console.log(err)
-                }
-                setErrorCode(err)
-            })
-    }, [])
+    // useEffect( () => {
+    //     axios.get("https://localhost:44371/api/blog")
+    //         .then(res => {
+    //             // console.log(res.data)
+    //             setData(res.data)
+    //         })
+    //         .catch(function (err) {
+    //             if(err.response) {
+    //                 console.log(err.response.data);
+    //                 console.log(err.response.status);
+    //                 console.log(err.response.headers);
+    //             }
+    //             else{
+    //                 console.log(err)
+    //             }
+    //             setErrorCode(err)
+    //         })
+    // }, [])
 
 
     if(error){

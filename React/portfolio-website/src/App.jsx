@@ -24,10 +24,8 @@ import NavigationBar from './components/NavigationBar';
 import Account from './components/authentication/Account';
 
 import { UserAuth } from './contexts/AuthContext';
-import { pdfjs } from 'react-pdf';
 
 function App (){
-  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
   const { user } = UserAuth();
   return (
     <Router>
