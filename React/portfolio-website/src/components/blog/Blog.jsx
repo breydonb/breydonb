@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../../App.css';
 
 import { API_VAR } from '../../api-var';
-import { Button, Badge} from 'react-bootstrap';
+import { Button, Badge, Container, Row, Col} from 'react-bootstrap';
 
 
 function Blog(){
@@ -54,4 +54,16 @@ function Blog(){
     )
 }
 
-export default Blog
+function BlogStillDeveloped(){
+    return(
+        <Container className='p-2'>
+            <Row>
+                <Col>
+                    <p>We're still working on this page</p>
+                </Col>
+            </Row>
+        </Container>
+    )
+}
+
+export default BlogStillDeveloped

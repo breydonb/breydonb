@@ -25,14 +25,12 @@ export const AuthContextProvider = ({children}) => {
             // Profile updated!
             // ...
           }).catch((error) => {
-            // An error occurred
-            // ...
+            // console.log(error)
           });
     }
 
     useEffect(() =>{
         const unsubscribe = onAuthStateChanged(auth, (currentUser) =>{
-          console.log(currentUser);
           setUser(currentUser);
         })
         return () => {

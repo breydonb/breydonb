@@ -27,7 +27,6 @@ function Account() {
             setUserId(user.uid)
             setEmail(user.email);
             try{
-                console.log(getUserInformation(uid))
                 setName(displayName)
             } catch(e){
                 console.log(e.message)

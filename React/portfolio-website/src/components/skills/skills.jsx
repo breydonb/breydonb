@@ -14,7 +14,7 @@ const skills = () => {
                 <div className='row'>
                     {Data.map(skills =>{
                         return(
-                            <div className='col-md-3 p-4'>
+                            <div className='col-md-3 p-4' key={skills.alt}>
                                 <img src={skills.img} alt={skills.alt} width= "100px" height="100px" />
                                 <p className='text-white p-2'>{skills.title}</p>
                             </div>

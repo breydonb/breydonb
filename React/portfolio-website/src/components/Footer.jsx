@@ -3,7 +3,7 @@ import { Github, Linkedin, StackOverflow } from 'react-bootstrap-icons';
 
 function Footer(){
     return(
-        <div className='p-3fixed-bottom'>
+        <div className='p-3'>
             <div className='d-flex justify-content-center '>
                 <ul class="nav justify-content-center">
                     <li class="nav-item">

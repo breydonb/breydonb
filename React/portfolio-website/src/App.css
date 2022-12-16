@@ -14,14 +14,6 @@ html, body{
   position: relative;
 }
 
-/* .ml-5{
-  margin-left: 20px;
-}
-
-.mr-5{
-  margin-right: 20px;
-} */
-
 .blog-container{
   display: grid;
   grid-template-columns: repeat(3, 2fr);
@@ -68,6 +60,10 @@ html, body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+#homepage-icon{
+  width: 500px;
 }
 
 .wave-spacer{
@@ -126,42 +122,6 @@ html, body{
   padding: 5em;
 }
 
-@media only screen 
-  and (min-device-width: 360px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    .p-text{
-      width:100%;
-    }
-
-    .padding-text{
-      padding: 1.5em;
-    }
-    .Typewriter{
-      margin-left: 5px;
-    }
-    
-}
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .p-text{
-      width:100%;
-    }
-
-    .padding-text{
-      padding: 1.5em;
-    }
-    .Typewriter{
-      margin-left: 5px;
-    }
-    .blog-container{
-      grid-template-columns: none;
-    }
-}
-
 @keyframes scrollLogoOnCanvas {
   0%{
     opacity: 0;
@@ -182,8 +142,52 @@ html, body{
   }
 }
 
-/* For Portrait Image of myself and hexagon border */
+@media (max-width: 900px) {
+  #homepage-icon {
+      width: 20em;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(0%,-200%);
+  }
+}
+
+@media (max-width: 912px){
+  #homepage-icon {
+      width: 20em;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(0%,-200%);
+  }
+}
+
+@media (max-width: 830px) {
+  #homepage-icon {
+      width: 25em;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(0%,-150%);
+  }
+}
+
+@media (max-width: 768px) {
+  #homepage-icon {
+      width: 25em;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(0%,-135%);
+  }
+}
+
+@media (max-width: 767px) {
+  #homepage-icon {
+      display: none;
+  }
+}
 
 .Typewriter{
-  margin-left: 10px;
+  margin-left: .25em;
 }
