@@ -1,12 +1,5 @@
 import React from 'react';
-
-import 'bootstrap/dist/css/bootstrap.css';
-
-
 import { Col, Container, Row } from 'react-bootstrap';
-import { Document, Page } from 'react-pdf';
-import resume from './assets/resume.pdf';
-
 
 function Contact() {
     
