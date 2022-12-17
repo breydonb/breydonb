@@ -3,7 +3,7 @@ import Footer from './components/Footer';
 
 import { Route, Routes,BrowserRouter as Router, Navigate} from 'react-router-dom';
 
-import Home from "./components/Home"
+// import Home from "./components/Home"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import ProjectPage from "./components/projects/ProjectPage"
@@ -11,6 +11,10 @@ import Blog from './components/blog/Blog';
 import SignUp from './components/authentication/SignUp';
 import Login from './components/authentication/Login';
 import ErrorNotFound from './components/ErrorHandling/ErrorNotFound';
+
+import Intro from "./components/intro/intro";
+import Projects from "./components/projects/Projects";
+import Skills from './components/skills/skills';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/';
@@ -42,6 +46,16 @@ function App (){
 
     </Router>
 
+  )
+}
+
+function Home() {
+  return (
+      <>
+          <Intro />
+          <Projects />
+          <Skills />
+      </>
   )
 }
 

@@ -10,7 +10,7 @@ function NavigationBar() {
     const { user, logout, updateUserProfile} = UserAuth();
     const { getUserInformation, displayName, photoURL } = FirestoreQueryContext();
     const [error, setError] = useState('')
-    const[title, setTitle] = useState('test');
+    const[title, setTitle] = useState('');
     const navigate = useNavigate();
 
     useEffect(()=>{

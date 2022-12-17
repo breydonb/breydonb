@@ -1,9 +1,13 @@
 import { React, useEffect, useState} from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
 import '../../App.css';
 
+<<<<<<< HEAD
+function BlogStillDeveloped(){
+=======
 import { ErrorNotFound } from '../ErrorHandling/ErrorNotFound'
 
 import { Button, Badge} from 'react-bootstrap';
@@ -39,29 +43,16 @@ function Blog(){
             <ErrorNotFound />
         )
     }
+>>>>>>> b1492b5b8190b18eb70a91012a884fd60c3776d3
     return(
-
-        <div className='blog-container'>
-            {data.map(post =>(
-                    <div className='blog-card' key={post.BlogId}>
-                        <img src="img/ph.svg" className='card-img' width='600'/>
-                        <div className='card-body p-2'>
-                            <div className=''>
-                                <Badge pill bg="primary">{post.PostCategory}</Badge>
-                                <h4>{post.Title}</h4>
-                            </div>
-                            <p>{post.BlogDesc}</p>
-                        </div>
-                        <div className='card-footer d-flex justify-content-between align-items-center p-2'>
-                            <small>{post.PublishDate}</small>
-                            <Button 
-                                variant="primary">Read More</Button>
-                        </div>
-                    </div>
-            ))}
-
-        </div>
+        <Container className='p-2'>
+            <Row>
+                <Col>
+                    <p>We're still working on this page</p>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
-export default Blog
+export default BlogStillDeveloped
