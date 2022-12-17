@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Card, Form, Row, Container, Col } from 'react-bootstrap';
-import { ArrowRepeat, PencilSquare, X } from 'react-bootstrap-icons';
+import { ArrowRepeat, PencilSquare } from 'react-bootstrap-icons';
 import { UserAuth } from '../../contexts/AuthContext'
 import { FirestoreQueryContext } from '../../contexts/FirestoreContext' 
 
@@ -43,6 +43,7 @@ function Account() {
                         <Card.Title>
                             <h2>Profile</h2>
                         </Card.Title>
+
                     </Card> 
                 </Col>
                 <Col sm={6}>
