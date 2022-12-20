@@ -1,13 +1,18 @@
 import React, {createContext, useContext, useEffect, useState} from 'react'
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, updateProfile } from 'firebase/auth'
 import { auth } from "../index";
+import { FirestoreQueryContext } from './FirestoreContext';
 
 const UserContext = createContext();
 
 export const AuthContextProvider = ({children}) => {
     const[user, setUser] = useState({});
-    const createUser = (email, password) => {
-        return createUserWithEmailAndPassword(auth, email, password)
+
+    const createUser = (email, password, fullName) => {
+        return createUserWithEmailAndPassword(auth, email, password).then((userCredential) =>{
+            const user = userCredential.user
+            userCredential.user.displayName = fullName;
+        })
     }
 
     const logout = () => {
@@ -18,16 +23,35 @@ export const AuthContextProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    const updateUserProfile = async (displayName, photoURL) => {
-        updateProfile(auth.currentUser, {
-            displayName: displayName, photoURL: photoURL
-          }).then(() => {
-            // Profile updated!
-            // ...
-          }).catch((error) => {
-            // console.log(error)
-          });
+    const updateUserProfile = async (fullName, photoURL) => {
+        try{
+            if(typeof(photoURL, undefined)){
+                updateProfile(auth.currentUser, {
+                    displayName: fullName
+                  }).then(() => {
+                    console.log("Successfully updated user")
+                  });
+            } else {
+                updateProfile(auth.currentUser, {
+                    displayName: fullName, photoURL: photoURL
+                  }).then(() => {
+                    console.log("Successfully updated user")
+                  });
+            }
+        } catch(e){
+
+        }
     }
+
+    // async function updateUserProfile(fullName){
+    //     updateProfile(auth.currentUser, {
+    //         displayName: fullName
+    //       }).then(() => {
+    //         console.log("Successfully updated user")
+    //       }).catch((e) => {
+            
+    //       });
+    // }
 
     useEffect(() =>{
         const unsubscribe = onAuthStateChanged(auth, (currentUser) =>{

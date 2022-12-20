@@ -31,7 +31,7 @@ function SignUp() {
         e.preventDefault();
         setError('');
         try{
-            await createUser(email, password);
+            await createUser(email, password, fullName);
             navigate('/');
             
         }catch(e){

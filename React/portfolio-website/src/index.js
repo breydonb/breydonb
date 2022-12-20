@@ -8,7 +8,6 @@ import { AuthContextProvider } from './contexts/AuthContext';
 import { getFirestore } from "firebase/firestore";
 import { FirestoreContextProvider } from './contexts/FirestoreContext';
 
-
 export const firebaseConfig = initializeApp({
   apiKey: "AIzaSyBx5iO2zA3DnWx7swuU6uvJFTnUo48GztE",
   authDomain: "portfolio-breydonb.firebaseapp.com",
@@ -24,11 +23,11 @@ export const db = getFirestore(firebaseConfig);
 
 ReactDOM.render(
     <React.StrictMode>
-      <AuthContextProvider>
-        <FirestoreContextProvider>
+      <FirestoreContextProvider>
+        <AuthContextProvider>
           <App />
-        </FirestoreContextProvider>
-      </AuthContextProvider>
+        </AuthContextProvider>
+      </FirestoreContextProvider>
     </React.StrictMode>,
   document.getElementById('root')
 );

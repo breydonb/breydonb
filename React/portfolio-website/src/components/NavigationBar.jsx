@@ -7,17 +7,16 @@ import { FirestoreQueryContext } from '../contexts/FirestoreContext';
 
 function NavigationBar() {
 
-    const { user, logout, updateUserProfile} = UserAuth();
-    const { getUserInformation, displayName, photoURL } = FirestoreQueryContext();
+    const { user, logout } = UserAuth();
     const [error, setError] = useState('')
     const[title, setTitle] = useState('');
     const navigate = useNavigate();
 
     useEffect(()=>{
         try{
+            console.log(user)
             if(user){
-                getUserInformation(user.uid)
-                const title = `Welcome, ${displayName}`
+                const title = `Welcome, ${user.displayName}`
                 setTitle(title)
             }
         }
@@ -25,7 +24,7 @@ function NavigationBar() {
             console.error(e.message)
         }
         
-    },[user,getUserInformation])
+    },[user])
 
     const handleLogout = async (e) =>{
         try{
@@ -63,7 +62,7 @@ function NavigationBar() {
                 </Nav>
                 <Nav>
                 {user ?
-                    <NavDropdown menuVariant='dark' title={title}>
+                    <NavDropdown className="fade-in-title" menuVariant='dark' title={title}>
                         <NavDropdown.Item>
                             <LinkContainer to="/account">
                                 <Nav.Link black>Account Settings</Nav.Link>
@@ -81,7 +80,7 @@ function NavigationBar() {
                         </LinkContainer><LinkContainer to="/login">
                             <Nav.Link>{user ? '' : "Log In"}</Nav.Link>
                         </LinkContainer>
-                        </>
+                    </>
                 }
                 </Nav>
             </Navbar.Collapse>

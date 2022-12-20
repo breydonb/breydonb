@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f3d9de8.css",
-    "main.js": "/static/js/main.dc6a37dc.js",
+    "main.css": "/static/css/main.6ee19d40.css",
+    "main.js": "/static/js/main.37be0e89.js",
     "static/media/layered-waves.svg": "/static/media/layered-waves.6f7f86a23a293e9747cd.svg",
     "static/media/stacked-waves.svg": "/static/media/stacked-waves.4d62c285a5ead60bddd6.svg",
     "static/media/layered-waves-about.svg": "/static/media/layered-waves-about.98abb3add2d9eb5b5760.svg",
@@ -9,11 +9,11 @@
     "static/media/layered-peaks.svg": "/static/media/layered-peaks.ac57542cd676b80eeecf.svg",
     "index.html": "/index.html",
     "static/media/ph.svg": "/static/media/ph.e92e7a8dfeb20db256036b5f5baf86ab.svg",
-    "main.3f3d9de8.css.map": "/static/css/main.3f3d9de8.css.map",
-    "main.dc6a37dc.js.map": "/static/js/main.dc6a37dc.js.map"
+    "main.6ee19d40.css.map": "/static/css/main.6ee19d40.css.map",
+    "main.37be0e89.js.map": "/static/js/main.37be0e89.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f3d9de8.css",
-    "static/js/main.dc6a37dc.js"
+    "static/css/main.6ee19d40.css",
+    "static/js/main.37be0e89.js"
   ]
 }

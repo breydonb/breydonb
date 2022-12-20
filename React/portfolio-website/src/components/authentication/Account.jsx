@@ -7,7 +7,7 @@ import { FirestoreQueryContext } from '../../contexts/FirestoreContext'
 
 function Account() {
     const { user, updateUserProfile } = UserAuth();
-    const { getUserInformation, displayName, photoURL } = FirestoreQueryContext();
+    const { getDocument, displayName, photoURL } = FirestoreQueryContext();
     
     const[email, setEmail] = useState("")
     const[isEditingEmail, setEditEmail] = useState(false);
@@ -33,7 +33,7 @@ function Account() {
             }
         }
         
-    },[user, uid, getUserInformation, displayName])
+    },[user, uid, displayName])
 
     return (
         <Container className='p-3 gap-2'>
