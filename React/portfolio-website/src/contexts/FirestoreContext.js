@@ -1,11 +1,11 @@
-import React, {createContext, useContext, useEffect, useState} from 'react'
+import React, {createContext, useContext, useState} from 'react'
 import { db } from "../index";
 import { collection, getDocs, setDoc, getDoc, doc } from 'firebase/firestore';
 
 const FirestoreContext = createContext();
 
 export const FirestoreContextProvider = ({children}) => {
-    const[data, setData] = useState([]);
+    const[data, setData] = useState([{}]);
     const[userData, setUserData] = useState([])
 
     const createUserInformation = async (fullName, hasAdminPrivilege, imageUrl, username, uid) => {
@@ -40,7 +40,6 @@ export const FirestoreContextProvider = ({children}) => {
     const getDocuments = async (col) => {
       const querySnapshot = await getDocs(collection(db, col));
       setData(querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id})))
-      console.log("pulling blog data")
     }
 
     
@@ -56,7 +55,6 @@ export const FirestoreContextProvider = ({children}) => {
         }
         else if(documentName === "blogs"){
           setData(docSnap.data());
-          console.log("pulling blog data")
           
         }
         else{

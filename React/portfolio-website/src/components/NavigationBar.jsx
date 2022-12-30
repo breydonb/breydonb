@@ -14,7 +14,6 @@ function NavigationBar() {
 
     useEffect(()=>{
         try{
-            console.log(user)
             if(user){
                 const title = `Welcome, ${user.displayName}`
                 setTitle(title)
