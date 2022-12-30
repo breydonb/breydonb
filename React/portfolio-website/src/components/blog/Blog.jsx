@@ -5,9 +5,6 @@ import { FirestoreQueryContext } from '../../contexts/FirestoreContext';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import '../../App.css';
-import { doc } from 'firebase/firestore';
-
-
 
 function Blog(){
     const { getDocuments, data} = FirestoreQueryContext();
